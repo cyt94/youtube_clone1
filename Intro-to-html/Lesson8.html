@@ -1,0 +1,64 @@
+  <!-- 
+3 types of display 1. Block (Takes up the entire line)
+                   2. In line block (Takes up only space which it needs to )
+                   3. inline element (Appears within a line of text)
+  -->
+  
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8</title>
+    <style>
+      .first-name{
+        width: 100px;
+        display: inline-block;
+        line-height: 30px;
+        border-radius: 3px;
+        border-width: 1px;
+      }
+      
+      .last-name{
+        width: 100px;
+        display: inline-block;
+        line-height: 30px;
+        border-radius: 3px;
+        border-width: 1px;
+      }
+      
+      .email{
+        margin-top: -15px;
+        width: 210px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        line-height: 20px;
+        margin-bottom: -15px;
+      }
+
+      .signup-box{
+        margin-top: 0px;
+        width: 220px;
+        display: inline-block;
+        background-color: blue;
+        color: white;
+        text-align: center;
+        font-size: 17px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        border-radius: 9px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <input class="first-name" type="text" placeholder="First name"> <input class="last-name" type="text" placeholder="Last name"> 
+    </p>
+    <p>
+      <input class="email" type="text" placeholder="Email">
+    </p>
+    <p class="signup-box">
+      Sign up
+    </p>
+  </body>
+  </html>

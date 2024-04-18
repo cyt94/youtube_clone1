@@ -1,0 +1,248 @@
+<!-- Paragraph by default are display blocks (which means they filled up the whole line)
+1. <div>, <p> are by default block elements.
+2. paragraphs by default comes with margin at the top and margin at the bottom
+(several white spaces at the top and bottom)
+3. <div> acts as a container to store all the information inside the container.   
+4. White Spaces outside of an element is known as margin.
+5. <div> can use the horizontal and vertical layout technique.
+6. Just like grid, flexbox also requires a container to store all the information inside the container.
+7. Grid has a rigid layout, flexbox has a more flexible layout.
+8. Nested flexbox -> Flexbox only affects elements on the first layer, in order to affect the rest of the elements a 2nd layer flexbox has to be
+written.
+9. flex-shrink:0; ensure the items within the element does not shrink
+10. width = 0; shrink
+11. position absolute INSIDE a position relative
+12. Semantic Elements <main> <nav> <header> , CSS ShortHand Properties, Inheritance
+
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube.com Clone</title>
+  <link rel="stylesheet" href="Intro-to-html/styles/general.css">
+  <link rel="stylesheet" href="Intro-to-html/styles/video.css">
+  <link rel="stylesheet" href="Intro-to-html/styles/header.css">
+</head>
+
+<!-- To create a vertial layout, needs to create 2 <div> -->
+<!-- Creating a header -->
+<body>  
+  <div class="header">
+    <div class="left-section">
+      <img class="hamburger-menu" src="icons/hamburger-menu.svg">
+      <img class="youtube-logo" src="icons/youtube-logo.svg">
+    </div>
+    <div class="middle-section">
+      <input class="search-bar" type="text" placeholder="Search">
+      <button class="search-button">
+        <img class="search-icon" src="icons/search.svg">
+        <div class="tooltip">Search</div>
+      </button>
+      <button class="voice-search-button">
+        <img class="voice-search-icon" src="icons/voice-search-icon.svg">
+        <div class="tooltip">Voice-Search</div>
+      </button>
+    </div>
+    <div class="right-section">
+      <div class="upload-icon-container">
+        <img class="upload-icon" src="icons/upload.svg">
+        <div class="tooltip">
+          Create
+        </div>
+      </div>
+        <img class="upload-youtube" src="icons/youtube-apps.svg">
+        <div class="notifications-icon-container">
+          <img class="upload-notification" src="icons/notifications.svg">
+          <div class="notifications-count">
+            3
+          </div>
+        </div>
+        <img class="upload-channel" src="channel-pictures/my-channel.jpeg">
+    </div>
+  </div>
+  
+  <!-- Side bar -->
+  <div class="sidebar-section">
+    <div class="sidebar-link">      
+        <img src="icons/home.svg">
+      <div>
+        Home
+      </div>
+    </div>
+    <div class="sidebar-link">
+        <img src="icons/explore.svg">
+      <div>
+        Explore
+      </div>
+    </div>
+    <div class="sidebar-link">
+        <img src="icons/subscriptions.svg">
+      <div>
+        Subscriptions
+      </div>
+    </div>
+    <div class="sidebar-link"> 
+        <img src="icons/originals.svg">
+      <div>
+        Source
+      </div>
+    </div>
+    <div class="sidebar-link">
+        <img src="icons/youtube-music.svg">
+      <div>
+        YouTube Music
+      </div>
+    </div>
+    <div class="sidebar-link"> 
+        <img src="icons/library.svg">
+      <div>
+        Library
+      </div>
+    </div>
+  </div>
+
+  <!-- To create a grid, we need a container for all of the videos -->
+  <main>
+    <section class="video-grid">
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
+          <div class="video-time">
+            14:20
+          </div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" 
+            src="channel-pictures/channel-1.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Talking Tech and AI with Google CEO Sundar Pichai! 
+            </p>
+            <p class="video-author">
+              Marques Brownlee
+            </p>
+            <p class="video-stats">
+              3.4M views &#183; 6 months ago
+            </p>
+          </div>
+        </div>
+      </div>
+       
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
+          <div class="video-time">
+            8:22
+          </div>
+        </div>
+        <p class="video-title">
+          Try Not To Laugh Challenge #9 
+        </p>
+        <p class="video-author">
+          Markiplier
+        </p>
+        <p class="video-stats">
+          19M views &#183; 4 years ago
+        </p>
+      </div>
+    
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
+          <div class="video-time">
+            9:13
+          </div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" 
+            src="channel-pictures/channel-1.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Talking Tech and AI with Google CEO Sundar Pichai! 
+            </p>
+            <p class="video-author">
+              Marques Brownlee
+            </p>
+            <p class="video-stats">
+              3.4M views &#183; 6 months ago
+            </p>
+          </div>
+        </div>
+      </div>    
+    
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
+          <div class="video-time">
+            10:02
+          </div>
+        </div>
+        <p class="video-title">
+          Try Not To Laugh Challenge #9 
+        </p>
+        <p class="video-author">
+          Markiplier
+        </p>
+        <p class="video-stats">
+          19M views &#183; 4 years ago
+        </p>
+      </div>
+    
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
+          <div class="video-time">
+            10:02
+          </div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture" 
+            src="channel-pictures/channel-1.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Talking Tech and AI with Google CEO Sundar Pichai! 
+            </p>
+            <p class="video-author">
+              Marques Brownlee
+            </p>
+            <p class="video-stats">
+              3.4M views &#183; 6 months ago
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
+          <div class="video-time">
+            10:02
+          </div>
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Try Not To Laugh Challenge #9 
+          </p>
+          <p class="video-author">
+            Markiplier
+          </p>
+          <p class="video-stats">
+            19M views &#183; 4 years ago
+          </p>
+        </div>
+      </div>
+    </section> 
+  </main>
+  
+</body>
+</html>
+

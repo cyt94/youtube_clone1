@@ -1,0 +1,93 @@
+.thumbnail{
+  width: 100%;
+}
+
+.search-bar{
+  display: block;
+  font-size: 15px;
+  margin-left: 12px;
+}
+
+.video-title{
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+/* Inheritance mostly work with text properties, font-family */
+.video-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+/* Responsive web design using @media*/
+@media (max-width: 750px)  {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1199px)
+{
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px){  
+  .video-grid {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+.video-info-grid{
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  
+} 
+
+.profile-picture{
+  width: 36px;
+  border-radius: 50px;
+}
+
+.thumbnail-row{
+  margin-bottom: 8px;
+  color: gray;
+  position: relative;
+}
+
+.video-author, .video-stats{
+  font-size: 13px;
+  color: rgb(96,96,96);  
+}
+
+.video-author{
+  margin-bottom: 4px;
+}
+
+/* CSS shorthand shortcuts
+          Top  right    bottom  Left
+padding   4px   10px    20px    35px
+margin
+*/
+
+.video-time{
+  border-radius: 2px;
+  padding: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+}
+
